@@ -145,8 +145,6 @@ const getData = async () => {
 
             }
         }
-        
-
         console.log(holderDomElement)
 
     }
@@ -154,9 +152,6 @@ const getData = async () => {
         console.log(err)
 
     }
-
-
-
 };
 
 document.getElementById('btn-search-symbol').addEventListener('click', getData);
@@ -216,9 +211,7 @@ else if(inputLength.length == ' ' && inputLength.length == '') {
 //     }
 // }
 
-
-
-    //iterrating overthat array by filter on basis data attribute.
+  //iterrating overthat array by filter on basis data attribute.
 }
 document.querySelector('#input-watchlist').addEventListener('keyup', getDataFromWatchlist)
 //add venetlistner on onchange when user clicks outside of list if watchlist is balnk and" " original pass to createdom.
@@ -271,12 +264,7 @@ holderDomElement.addEventListener("click", (e) => {
         // creatTable();
         // console.log(tableClass)
     }
-
-
 });
-
-
-
 
 async function getTableData(clickedValueForTable, id) {
     console.log(id)
@@ -295,9 +283,6 @@ async function getTableData(clickedValueForTable, id) {
             const res = await getAPI.json();
 
             // console.log(res)
-
-
-
             responseValues = Object.values(res['Time Series (Daily)'])
             responseKeys = Object.keys(res['Time Series (Daily)'])
 
@@ -329,12 +314,7 @@ async function getTableData(clickedValueForTable, id) {
         console.log(err)
     }
 
-
-
-
     let ccc = responseValues[0];
-
-
 
     function creatTable() {
         // Assume that the API data is stored in an object called "data"
@@ -384,7 +364,6 @@ async function getTableData(clickedValueForTable, id) {
 
         }
 
-
         // Append the table to an existing element on the page (e.g., a div)
         document.getElementById(id).appendChild(table);
         //   table.classList.toggle("create-table");
@@ -397,21 +376,7 @@ async function getTableData(clickedValueForTable, id) {
 
     creatTable();
 
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
 //document.getElementById('watchlist-select1').addEventListener('click', creatTable)
 
 //getTableData()
